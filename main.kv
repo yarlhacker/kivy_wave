@@ -1,5 +1,6 @@
 #: import BoxLayoutEx controleur.screenprincipal.BoxLayoutEx
 #: import ContactLayoutEx controleur.contactlist.ContactLayoutEx
+#: import RecuView controleur.recuview.RecuView
 #: import Menu_Bar controleur.bar.Menu_Bar
 
 
@@ -12,8 +13,24 @@
     
     Screen:
         name : "screen2"
-        Menu_Bar:
-            title : 'Envoyer de largent'
+        BoxLayout:
+            orientation: 'vertical'
+            MDToolbar:
+                left_action_items: [["arrow-left", lambda push:app.manager.pop() ]]
+                title: "[b]ENVOYER DE L'ARGENT [/b]"
+                anchor_title: "center"
+                md_bg_color: app.theme_cls.primary_light
             ContactLayoutEx
+    Screen:
+        name : "screen3"
+        BoxLayout:
+            orientation: 'vertical'
+            MDToolbar:
+                left_action_items: [["arrow-left", lambda push:app.manager.pop() ]]
+                title: '[b]RECU[/b]'
+                anchor_title: "center"
+                specific_text_color: app.theme_cls.accent_color
+                md_bg_color: app.theme_cls.primary_light
+            RecuView
 
         

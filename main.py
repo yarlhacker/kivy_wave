@@ -11,6 +11,7 @@ class Main_Kivy(Screen_Wave):
 class MainApp(MDApp):
     manager = ObjectProperty(None)
     def build(self):
+        self.theme_cls.primary_palette = "Blue"
         self.manager = Main_Kivy()
         return self.manager
         # return ContactLayoutEx()

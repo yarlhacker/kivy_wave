@@ -1,0 +1,8 @@
+<MyItem@MDBoxLayout>:
+    size_hint : 1 , None
+    height : dp(50)
+    adaptive_height: True
+    TwoLineListItem:
+        text: "Two-line item"
+        secondary_text: "Secondary text here"
+        on_release:app.manager.push('screen3')

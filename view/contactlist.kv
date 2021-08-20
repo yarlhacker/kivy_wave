@@ -1,54 +1,63 @@
+
 <ContactLayoutEx>:
     MDBoxLayout:
-        padding:dp(20),dp(10)
+        padding:dp(10),dp(30)
         orientation: 'vertical'
         MDTextField:
             hint_text: "A"
+            size_hint_x: .9
+            pos_hint: {'center_x':.5}
 
         ScrollView:
             MDList:
+                padding: 0,0
                 OneLineAvatarListItem:
                     text: "Single-line item with avatar"
                     IconLeftWidget:
-                        icon: "language-python"
+                        icon: "plus-circle"
+                        text_color: 0,0,0,1  
+
                 MDLabel:
                     text:'Contacts'
                     size : self.texture_size
                     size_hint : 1,None  
+                    padding:dp(30),dp(0)
 
+                TwoLineIconListItem:
+                    padding: 0,0
+                    text: "Two-line item with avatar"
+                    secondary_text: "Secondary text here"
+
+                    IconLeftWidget:
+                        icon: "account-circle"
+                        padding:0,0
                 TwoLineIconListItem:
                     text: "Two-line item with avatar"
                     secondary_text: "Secondary text here"
 
                     IconLeftWidget:
-                        icon: "language-python"
+                        icon: "account-circle"
                 TwoLineIconListItem:
                     text: "Two-line item with avatar"
                     secondary_text: "Secondary text here"
 
                     IconLeftWidget:
-                        icon: "language-python"
+                        icon: "account-circle"
                 TwoLineIconListItem:
                     text: "Two-line item with avatar"
                     secondary_text: "Secondary text here"
 
                     IconLeftWidget:
-                        icon: "language-python"
+                        icon: "account-circle"
                 TwoLineIconListItem:
                     text: "Two-line item with avatar"
                     secondary_text: "Secondary text here"
 
                     IconLeftWidget:
-                        icon: "language-python"
+                        icon: "account-circle"
                 TwoLineIconListItem:
                     text: "Two-line item with avatar"
                     secondary_text: "Secondary text here"
 
                     IconLeftWidget:
-                        icon: "language-python"
-                TwoLineIconListItem:
-                    text: "Two-line item with avatar"
-                    secondary_text: "Secondary text here"
-
-                    IconLeftWidget:
-                        icon: "language-python"
+                        icon: "account-circle"
