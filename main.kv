@@ -1,0 +1,19 @@
+#: import BoxLayoutEx controleur.screenprincipal.BoxLayoutEx
+#: import ContactLayoutEx controleur.contactlist.ContactLayoutEx
+#: import Menu_Bar controleur.bar.Menu_Bar
+
+
+
+<Main_Kivy>:
+    orientation:'vertical'
+    Screen:
+        name : "screen1"
+        BoxLayoutEx
+    
+    Screen:
+        name : "screen2"
+        Menu_Bar:
+            title : 'Envoyer de largent'
+            ContactLayoutEx
+
+        

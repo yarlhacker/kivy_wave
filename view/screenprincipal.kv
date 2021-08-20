@@ -1,0 +1,106 @@
+<BoxLayoutEx>
+    orientation: 'vertical'        
+    MDToolbar:
+        left_action_items: [["menu", lambda x: app.callback()]]
+    ScrollView:
+        MDList:
+            id:idp
+            MDBoxLayout:
+                orientation: 'vertical'
+                md_bg_color: app.theme_cls.primary_color
+                size_hint : 1 , None
+                height : dp(230)
+                canvas:
+                    Color:
+                        rgb : 1,1,1
+                    RoundedRectangle:
+                        source : 'assets/image_wave.jpg'
+                        pos:self.center_x-300/2,self.center_y-160/2
+                        size:dp(300), dp(160)
+                        radius:[dp(25)]  
+            MDBoxLayout:
+                md_bg_color: app.theme_cls.bg_darkest
+                size_hint : 1 , None
+                height : dp(1000)
+                padding: dp(10),dp(60),dp(10),dp(10)
+                MDCard:
+                    id : idp2
+                    elevation:dp(10)
+                    radius: [dp(25)]
+                    MDList:
+                        size_hint: None,None
+                        size : idp2.size
+                        MDBoxLayout:
+                            size_hint : 1 , None
+                            height : dp(50)
+                            TwoLineListItem:
+                                text: "Two-line item"
+                                secondary_text: "Secondary text here"
+                        MDBoxLayout:
+                            size_hint : 1 , None
+                            height : dp(50)
+                            TwoLineListItem:
+                                text: "Two-line item"
+                                secondary_text: "Secondary text here"
+                        MDBoxLayout:
+                            size_hint : 1 , None
+                            height : dp(50)
+                            TwoLineListItem:
+                                text: "Two-line item"
+                                secondary_text: "Secondary text here"
+                        MDBoxLayout:
+                            size_hint : 1 , None
+                            height : dp(50)
+                            TwoLineListItem:
+                                text: "Two-line item"
+                                secondary_text: "Secondary text here"
+                        MDBoxLayout:
+                            size_hint : 1 , None
+                            height : dp(50)
+                            TwoLineListItem:
+                                text: "Two-line item"
+                                secondary_text: "Secondary text here"
+                        MDBoxLayout:
+                            size_hint : 1 , None
+                            height : dp(50)
+                            TwoLineListItem:
+                                text: "Two-line item"
+                                secondary_text: "Secondary text here"
+                        MDBoxLayout:
+                            size_hint : 1 , None
+                            height : dp(50)
+                            TwoLineListItem:
+                                text: "Two-line item"
+                                secondary_text: "Secondary text here"
+                        MDBoxLayout:
+                            size_hint : 1 , None
+                            height : dp(50)
+                            TwoLineListItem:
+                                text: "Two-line item"
+                                secondary_text: "Secondary text here"
+                        MDBoxLayout:
+                            size_hint : 1 , None
+                            height : dp(50)
+                            TwoLineListItem:
+                                text: "Two-line item"
+                                secondary_text: "Secondary text here"
+                        MDBoxLayout:
+                            size_hint : 1 , None
+                            height : dp(50)
+                            TwoLineListItem:
+                                text: "Two-line item"
+                                secondary_text: "Secondary text here"
+            FloatLayout:
+                orientation: 'vertical'
+                pos_hint:{"center_x":.5,}
+                size_hint: 1,None
+                height : 0
+                MDFillRoundFlatIconButton:
+                    text: "Envoyer de l'argent"
+                    elevation: 12
+                    md_bg_color: app.theme_cls.bg_light
+                    text_color : 0,0,1,1
+                    icon_color : 0,0,1,1
+                    top: idp.top-dp(230)
+                    center_x: idp.center_x
+                    on_press : app.manager.push("screen2")
